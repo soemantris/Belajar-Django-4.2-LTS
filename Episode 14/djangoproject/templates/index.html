@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}
+{{title}}
+{% endblock head_title %}
+
+{% block content %}
+
+    <img id="banner" src="{% static banner %}" alt="banner">
+
+    <h2>{{subtitle}}</h2>
+
+{% endblock content %}
