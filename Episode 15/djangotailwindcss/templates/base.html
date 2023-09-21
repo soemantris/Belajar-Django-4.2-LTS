@@ -1,0 +1,14 @@
+
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}{{title}}{% endblock head_title %}</title>
+    <link rel="stylesheet" href="{% static 'dist/output.css' %}">
+</head>
+<body class="min-h-screen flex items-center">
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

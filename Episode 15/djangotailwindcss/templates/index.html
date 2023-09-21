@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %}{{title}}{% endblock head_title %}
+
+{% block content %}
+
+<div class="max-w-md mx-auto border py-8 px-8 rounded-lg shadow-xl">
+    <div class="flex items-center space-x-6">
+        <img class="w-14 h-14 rounded-full" src="{% static 'images/me.jpeg' %}" alt="">
+        <div class="-space-y-0.5">
+            <p class="text-2xl font-semibold text-black">{{name}}</p>
+            <p class="text-slate-600 font-medium">{{jobs}}</p>
+        </div>
+        <button class="border px-5 py-1 rounded-full text-slate-600 border-red-600 font-semibold hover:bg-red-500 hover:text-white hover:border-transparent hover:ring-2 hover:ring-red-300 hover:ring-offset-2">Lihat profil</button>
+    </div>
+    <p class="text-xl mx-auto text-slate-600 mt-5">{{subtitle}} - Stave Jobs</p>
+</div>
+
+{% endblock content %}
