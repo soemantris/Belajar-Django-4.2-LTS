@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %}{{title}}{% endblock head_title %}
+
+{% block content %}
+ <!-- Blog -->
+ <section class="mt-5">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3 border-0 bg-transparent">
+                    <img src="{% static 'img/macbook_detail_blog.png' %}" class="card-img-top rounded-4 h-50 d-block" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fs-3 text-primary">Macbook Pro 2023 Cool!</h5>
+                        <p class=" card-text">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <i class="bi bi-calendar-event"></i>
+                                <small class="text-body-secondary"> 11 November 2023</small>
+                            </li>
+                            <li class="list-inline-item">
+                                <i class="bi bi-chat-dots-fill"></i>
+                                <small class="text-body-secondary"> 1 Berkomentar</small>
+                            </li>
+                        </ul>
+                        </p>
+                        <p class="card-text justify lh-lg fs-5">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing
+                            elit.
+                            Reiciendis
+                            animi ex incidunt culpa minus magnam labore, perspiciatis, doloribus repudiandae
+                            tempore
+                            libero totam facilis suscipit asperiores repellendus temporibus aspernatur voluptas?
+                            Vel
+                            incidunt doloremque libero pariatur praesentium. Consectetur, qui nam impedit
+                            reiciendis
+                            modi, corrupti distinctio saepe, ullam libero cumque expedita! Nesciunt optio
+                            reiciendis, voluptas perspiciatis maxime repellat id distinctio doloribus libero
+                            quidem!
+                            Dolorem dignissimos numquam, placeat dolorum ullam fuga pariatur ex blanditiis,
+                            recusandae dolores tempore eveniet suscipit optio! Ullam asperiores atque quas earum
+                            ut
+                            maxime error expedita vero iste, ipsam odit, sed nesciunt. Quaerat sint magnam et,
+                            inventore pariatur cum asperiores maxime?</p>
+                    </div>
+                </div>
+
+                <!-- Komentar -->
+                <h5>Komentar (1)</h5>
+                <form>
+                    <div class="mb-3">
+                        <textarea type="email" class="form-control"
+                            placeholder="Ketik komentar Anda di sini."></textarea>
+                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                        </div> -->
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary mr-auto shadow-sm">Beri komentar</button>
+                    </div>
+                </form>
+                <div class="d-flex my-5">
+                    <div class="flex-shrink-0">
+                        <img src="{% static 'img/profil.png' %}" width="50" alt="username">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h5>Username</h5>
+                        <small>10 November 2023</small><br>
+                        Muantap artikelnya omm!
+                        <div class="d-flex justify-content-start">
+                            <a href="#" class="text-decoration-none text-info">Balas</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ending Komentar -->
+
+                <!-- Blog terkait -->
+                <div class="row">
+                    <h5>Blog terkait:</h5>
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0 bg-transparent">
+                            <img src="{% static 'img/chip_m2.jpg' %}" class="card-img-top rounded-4 h-50 d-block" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title"><a class="text-decoration-none text-primary" href="#">Chip M2
+                                        kencangnya
+                                        Gila!</a></h6>
+                                <p class="card-text"><i class="bi bi-calendar-event"></i>
+                                    <small class="text-body-secondary">10 Oktober 2023</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0 bg-transparent">
+                            <img src="{% static 'img/elon_x.jpg' %}" class="card-img-top rounded-4 h-50 d-block" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title"><a class="text-decoration-none text-primary" href="#">Elon
+                                        Mush Ganti Logo
+                                        X</a></h6>
+                                <p class="card-text"><i class="bi bi-calendar-event"></i> <small class="text-body-secondary">30 Oktober 2023</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-3 border-0 bg-transparent">
+                            <img src="{% static 'img/elon_x.jpg' %}" class="card-img-top rounded-4 h-50 d-block" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title"><a class="text-decoration-none text-primary" href="#">Macbook
+                                        Pro 2023
+                                        Cool!</a></h6>
+                                <p class="card-text"><i class="bi bi-calendar-event"></i> <small class="text-body-secondary">11 November 2023</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ending Blog terkait -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ending Blog -->
+{% endblock content %}

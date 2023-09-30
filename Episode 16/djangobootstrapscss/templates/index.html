@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %} {{title}} {% endblock head_title %} 
+
+{% block content %}
+
+<!-- Hero -->
+<section id="hero">
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img class="mx-auto d-block img-fluid" src="{% static 'img/web developer girl.png' %}" alt="">
+            </div>
+            <div class="col-md-6">
+                <h1>A Web Development</h1>
+                <p class="mt-4 lh-base fs-5 text-black-50">
+                    Seorang web development yang pernah bekerja di Sun Francisco sana, dengan keahlian membuat
+                    sistem
+                    dengan menggunakan web framework Django Python
+                </p>
+                <div class="d-flex flex-row align-items-start">
+                    <div class="me-4 mb-2"><a href="https://github.com/sumsyahrul?tab=repositories"
+                            class="text-black-50"><i class="bi bi-github" style="font-size: 20px;"></i></a></div>
+                    <div class="me-4 mb-2"><a href="#" class="text-black-50"><i class="bi bi-youtube"
+                                style="font-size: 20px;"></i></a>
+                    </div>
+                    <div class="me-4 mb-2"><a href="#" class="text-black-50"><i class="bi bi-discord"
+                                style="font-size: 20px;"></i></a>
+                    </div>
+                    <div class="me-4 mb-2"><a href="#" class="text-black-50"><i class="bi bi-tiktok"
+                                style="font-size: 20px;"></i></a>
+                    </div>
+                </div>
+                <p>Sulawesi - Indonesia</p>
+                <div class="d-grid col-md-3">
+                    <a class=" btn btn-md btn-outline-primary shadow-sm" href="#">Unduh CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ending Hero -->
+
+<!-- Blog -->
+<section class="bg-secondary mt-5">
+    <div class="container py-4">
+        <h2>Blog</h2>
+        <div class="d-flex justify-content-between">
+            <p class="fs-5 text-black-50">Artikel terbaru dan terupdate tentang teknologi.</p>
+            <p class="link-info fs-5">Lihat semuanya >></p>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card mb-3 border-0 bg-transparent">
+                    <img src="{% static 'img/chip_m2.jpg' %}" class="card-img-top rounded-4 h-50 d-block" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Chip M2 kencangnya Gila!</h5>
+                        <p class="card-text"><i class="bi bi-calendar-event" style="color: #C96C25"></i>
+                            <small class="text-primary">10 Oktober 2023</small>
+                        </p>
+                        <p class="card-text text-black-50">Chip M2 di gadang-gadang kan
+                            akan menjadi paling . . .</p>
+                        <a href="" class="btn btn-primary shadow-sm text-white">Lengkap</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 border-0 bg-transparent">
+                    <img src="{% static 'img/elon_x.jpg' %}" class="card-img-top rounded-4 h-50 d-block" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Elon Mush Ganti Logo X</h5>
+                        <p class="card-text"><i class="bi bi-calendar-event" style="color: #C96C25"></i> <small
+                                class="text-primary">30 Oktober 2023</small></p>
+                        <p class="card-text text-black-50">Elon mush ganti logo twitter yang sebelumnya jadi "X" . . .</p>
+                        <a href="" class="btn btn-primary shadow-sm text-white">Lengkap</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 border-0 bg-transparent">
+                    <img src="{% static 'img/macbook_pro.jpg' %}" class="card-img-top rounded-4 h-50 d-block" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Macbook Pro 2023 Cool!</h5>
+                        <p class="card-text"><i class="bi bi-calendar-event" style="color: #C96C25"></i> <small
+                                class="text-primary">11 November 2023</small></p>
+                        <p class="card-text text-black-50">Akhirnya macbook pro telah di keluarkan tahun ini dan . . .</p>
+                        <a href="" class="btn btn-primary shadow-sm text-white">Lengkap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ending Blog -->
+
+<!-- Kontak -->
+<section id="kontak" class="mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class=" col-md-6">
+                <h2>Kontak</h2>
+                <p class="fs-5 text-black-50">Kirim saran dan pesan Anda di sini!</p>
+                <form class="pt-3">
+                    <div class="mb-3">
+                        <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+                        <input type="text" class="form-control" placeholder="Masukan nama lengkap">
+                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                        <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+                        <input type="password" class="form-control" placeholder="Masukan email">
+                    </div>
+                    <div class="mb-3">
+                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                        <textarea class="form-control" placeholder="Isi pesan" rows="7"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary shadow-sm text-white">Kirim</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/kontak girl.png' %}" class="mx-auto d-block img-fluid w-75" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ending Kontak -->
+
+
+{% endblock content %}

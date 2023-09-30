@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %}{{title}}{% endblock head_title %}
+
+{% block content %}
+    <!-- Banner -->
+    <div class="container mt-5">
+        <img src="{% static 'img/kontak.png' %}" class="mx-auto d-block img-fluid" alt="">
+    </div>
+    <!-- Ending Banner -->
+
+    <!-- Kontak -->
+    <section id="kontak" class="mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class=" col-md-6">
+                    <h2>Pesan</h2>
+                    <p class="text-secondary fs-5 text-black-50">Kirim saran dan pesan Anda di sini!</p>
+                    <form class="pt-3">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Masukan nama lengkap">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Masukan email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" placeholder="Isi pesan" rows="7"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary shadow-sm text-white">Kirim</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'img/kontak_girl.png' %}" class="mx-auto d-block img-fluid w-75" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ending Kontak -->
+
+    <div class=" container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="ratio ratio-4x3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.589066715265!2d119.40329677473021!3d-5.169608652200852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee2a98439df93%3A0x7173d025f4781313!2sPoliteknik%20Maritim%20AMI%20Makassar%20(POLIMARIM)!5e0!3m2!1sid!2sid!4v1694878860360!5m2!1sid!2sid"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4 text-primary">Kontak</h2>
+                <p class="fs-5"><i class="bi bi-phone"></i> 0812 43857 7482</p>
+                <p class="fs-5"><i class="bi bi-envelope-at"></i> sumsyahrul@gmail.com</p>
+                <p class="fs-5"><i class="bi bi-globe2"></i> https://sumantris.com</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
