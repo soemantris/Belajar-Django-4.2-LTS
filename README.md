@@ -1,2 +1,2 @@
 # Belajar-Django-4.2-LTS
-Repository tutori Django Web Framework
+Repository tutorial Django Web Framework
