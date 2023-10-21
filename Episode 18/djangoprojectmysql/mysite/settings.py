@@ -77,10 +77,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dbmysite', # ! nama database
-        'USER': 'postgres', # ! nama username dari database
-        'PASSWORD': '081120', # ! password dari username db
-        'HOST': 'localhost', # ! host dari db
-        'PORT': '5432',
+        'USER': 'root', # ! nama username dari database
+        'PASSWORD': '', # ! password dari username db
+        'HOST': '/Applications/XAMPP/xamppfiles/mysql/mysql.lock', # ! host dari db
+        'PORT': '3306',
     }
 }
 
