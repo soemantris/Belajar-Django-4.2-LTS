@@ -80,7 +80,7 @@ DATABASES = {
         'USER': 'root', # ! nama username dari database
         'PASSWORD': '', # ! password dari username db
         'HOST': '/Applications/XAMPP/xamppfiles/mysql/mysql.lock', # ! host dari db
-        'PORT': '3306',
+        'PORT': '3306', # ! port mysql
     }
 }
 
