@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="/blog/">Home Blog</a></li>
+        <li><a href="/blog/blog/">Blog</a></li>
+        <li><a href="/blog/berita/">Berita</a></li>
+        <li><a href="/blog/gibah/">Bukan Gibah</a></li>
+    </ul>
+
+    <h1>{{headline}}</h1>
+
+    {% for post in articles %}
+    <h2>{{post.judul}}</h2>
+    <h4>{{post.tanggalPublik}}</h4>
+    <p>{{post.isi}}</p>
+    <span>{{post.kategori.nama}}</span>
+    <br><br>
+    {% endfor %} 
+
+</body>
+</html>
