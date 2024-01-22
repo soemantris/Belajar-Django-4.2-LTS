@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{title}}{% endblock head_title %}
+
+{% block contents %}
+<h1>{{headline}}</h1>
+{% for kat in categories %}
+    <h3>{{kat.judul}}</h3>
+    <p>kategori:  {{kat.kategori}}</p>
+{% endfor %}
+{% endblock contents %}
