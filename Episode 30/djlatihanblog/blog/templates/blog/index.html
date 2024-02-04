@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block title %}
+<h2>{{Judul}}</h2>
+{% endblock title %}
+
+{% block contents %}
+
+<h1>{{Heading}}</h1>
+    <div class="row">
+
+    {% for post in Articles %}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <a href="/blog/detail/{{post.slug_art}}/"><h2 class="card-title">{{post.judul}}</h2></a>
+                    <span class="text-secondar">{{post.pubdate}}</span>
+                    <p class="text-dark fst-norma">{{post.isi}}</p>
+                </div>
+            </div>
+        </div> 
+    {% endfor %}
+
+    </div>
+
+{% endblock contents %}
