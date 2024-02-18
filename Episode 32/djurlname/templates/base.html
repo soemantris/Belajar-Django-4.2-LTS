@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block head_title %}
+        {{Judul}}
+        {% endblock head_title %}
+    </title>
+</head>
+<body>
+
+    {% comment %} <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <ul>
+            <li><a href="/blog/artikel">Daftar Artikel</a></li>
+            <li><a href="/blog/detail/selamat-datang-teman-teman">Detail Artikel</a></li>
+            <li><a href="/blog/spesial/1234567">Spesial Artikel</a></li>
+        </ul>
+    </ul> {% endcomment %}
+
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'blog:index' %}">Blog</a></li>
+        <ul>
+            <li><a href="{% url 'blog:daftar' %}">Daftar Artikel</a></li>
+            <li><a href="{% url 'blog:detail' input='selamat-datang-teman-teman' %}">Detail Artikel</a></li>
+            <li><a href="{% url 'blog:spesial' inputInt=123 %}">Spesial Artikel 123</a></li>
+            <li><a href="{% url 'blog:spesial' inputInt=456 %}">Spesial Artikel 456</a></li>
+        </ul>
+    </ul>
+
+    {% block contents %}
+    
+    {% endblock contents %}
+    
+</body>
+</html>
