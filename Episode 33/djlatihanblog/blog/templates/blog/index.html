@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block title %}
+<h2 class="mt-5 text-info ">{{Judul}}</h2>
+{% endblock title %}
+
+{% block contents %}
+
+<h1>{{Heading}}</h1>
+    <div class="row">
+
+        <div class="col-md-3 mt-5">
+            <div class="card">
+                <div class="card-header bg-primary text-white ">
+                    Kategori
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item ">
+                        <a class="text-decoration-none text-secondary " href="{% url 'blog:index' %}">
+                            semua
+                        </a>
+                    </li>
+                    {% for kat in Categories %}
+                    <li class="list-group-item ">
+                        <a class="text-decoration-none text-secondary " href="{% url 'blog:kategori_artikel' kat.kategori__nama %}">
+                            {{kat.kategori__nama}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    <div class="col-md-9">
+        <div class="row">
+            {% for post in Articles %}
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <a class="text-decoration-none " href="{% url 'blog:detail_artikel' post.slug_art %}"><h2 class="card-title">{{post.judul}}</h2></a>
+                            <span class="text-secondary">{{post.pubdate}}</span>
+                            <p class="text-dark fst-norma">{{post.isi|truncatewords:20}}</p>
+                        </div>
+                    </div>
+                </div> 
+            {% endfor %}
+        </div>
+    </div>
+
+    </div>
+
+{% endblock contents %}
