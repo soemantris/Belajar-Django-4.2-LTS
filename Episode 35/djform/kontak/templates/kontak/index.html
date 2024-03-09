@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{Judul}}{% endblock head_title %}
+
+{% block contents %}
+
+    <h1>{{Heading}}</h1>
+
+    <form method='POST'>
+        {% csrf_token %}
+        <table>
+            {{kontak_form.as_table}}
+        </table>
+        
+        <button type="submit">Kirim</button>
+    </form>
+
+    <h3>Nama : {{nama}}</h3>
+    <span>Email : {{email}}</span>
+    <p>Subjek : {{subjek}}</p>
+    <p>Pesan : {{pesan}}</p>
+
+
+{% endblock contents %}
