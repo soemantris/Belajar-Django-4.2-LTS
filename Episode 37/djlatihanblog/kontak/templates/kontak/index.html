@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block title %}
+<h2 class="mt-5">{{Judul}}</h2>
+{% endblock title %}
+
+{% block contents %}
+
+<h1>{{Heading}}</h1>
+
+<form method='POST'>
+    {% csrf_token %}
+    
+    <div class="mb-3">
+        {{f_kontak.nama.label_tag}}
+        {{f_kontak.nama}}
+    </div>
+
+    <div class="mb-3">
+        {{f_kontak.email.label_tag}}
+        {{f_kontak.email}}
+        <div class="form-text">
+            {{f_kontak.email.help_text}}
+        </div>
+    </div>
+
+    <div class="mb-3">
+        {{f_kontak.jenkel.label_tag}}
+        {% for komp_jenkel in f_kontak.jenkel %}
+        <div class="form-check">
+            {{komp_jenkel.tag}}
+            <label for="{{komp_jenkel.id_for_label}}" class="form-check-label">
+                {{komp_jenkel.choice_label}}
+            </label>
+        </div>
+            {% endfor %}
+    </div>
+
+    <div class="mb-3">
+        {{f_kontak.tgl_lahir.label_tag}}
+        {{f_kontak.tgl_lahir}}
+    </div>
+
+    <div class="mb-3">
+        {{f_kontak.pesan.label_tag}}
+        {{f_kontak.pesan}}
+    </div>
+
+    <div class="mb-3">
+        <div class="form-check">
+            {{f_kontak.agree}}
+            <label for="{{f_kontak.agree.id_for_label}}" class="form-check-label">
+                {{f_kontak.agree.label}}
+            </label>
+        </div>
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Kirim</button>
+</form>
+
+{% endblock contents %}
