@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block contents %}
+<h1>{{Heading}}</h1>
+
+{% for kontak in contacts %}
+    <h2>{{kontak.nama}}</h2>
+    <p>{{kontak.email}}</p>
+    <p>{{kontak.pesan}}</p>
+{% endfor %}
+
+{% endblock contents %}
