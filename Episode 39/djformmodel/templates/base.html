@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block head_title %}
+        
+        {% endblock head_title %}
+    </title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="{% url 'index' %}">Beranda</a></li>
+        <li><a href="{% url 'kontak:index' %}">Kontak Masuk</a>
+        <ul>
+            <li><a href="{% url 'kontak:create' %}">Buat Pesan</a></li>
+        </ul>
+        </li>
+    </ul>
+    
+    {% block contents %}
+    
+    {% endblock contents %}
+
+</body>
+</html>
