@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block contents %}
+
+<h1>{{Heading}}</h1>
+
+{% for post in articles %}
+
+<h1>{{post.judul}}</h1>
+<h2>penulis: {{post.penulis}}</h2>
+<p>{{post.isi}}</p>
+<p>Kategori: {{post.kategori}}</p>
+<p>Tags: {{post.tag}}</p>
+
+{% endfor %}
+
+
+{% endblock contents %}
