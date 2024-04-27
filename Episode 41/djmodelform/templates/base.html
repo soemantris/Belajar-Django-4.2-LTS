@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block head_title %}
+        {{Judul}}
+        {% endblock head_title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+    <div class="container">
+
+        <ul>
+            <li><a href="{% url 'index' %}">Beranda</a></li>
+            <li><a href="{% url 'blog:index' %}">Blog Artikel</a>
+                <ul>
+                    <li><a href="{% url 'blog:create' %}">Buat Artikel</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        {% block contents %}
+        
+        {% endblock contents %}
+
+    </div>
+
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block contents %}
+<h1>{{Heading}}</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    {% for field in form %}
+        <div class="mb-3">
+            <label for="{{field.id_for_label}}" class="form-label">{{field.label}}</label>
+            {{field}}
+
+            {% if field.errors %}
+                <span class='text-danger'>{{field.errors}}</span>
+            {% endif %}
+
+        </div>
+    {% endfor %}
+
+    {% comment %} {{form.judul.label_tag}}
+    {{form.judul}}
+
+    <table>
+        {{form.as_table}}
+    </table> {% endcomment %}
+
+    <button type="submit" class="btn btn-primary">Kirim</button>
+</form>
+
+{% endblock contents %}
