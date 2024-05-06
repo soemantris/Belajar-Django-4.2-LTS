@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 
 # Create your views here.
-
 # import models & frosm
 from . models import Tujuan
 from . forms import TujuanForm
