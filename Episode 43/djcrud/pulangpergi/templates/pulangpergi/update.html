@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block contents %}
+<h2>{{Heading}}</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        {% for field in form %}
+        <div class="mb-4">
+            <label for="{{field.id_for_label}}">{{field.label}}</label>
+            {{field}}
+        </div>
+        {% endfor %}
+    </div>
+
+    <button type="submit" class='btn btn-primary'>Kirim Perubahan</button>
+</form>
+
+
+{% endblock contents %}
