@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{Judul}}
+{% endblock head_title %}
+
+{% block contents %}
+<h2>{{Heading}}</h2>
+
+{% include "messages.html" %}
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nama Penumpang</th>
+        <th scope="col">Nama Pengemudi</th>
+        <th scope="col">Tujuan</th>
+        <th scope="col" colspan="2" class="text-center">Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for tujuan in semua_tujuan %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{tujuan.nm_penumpang}}</td>
+            <td>{{tujuan.nm_pengemudi}}</td>
+            <td>{{tujuan.tujuan}}</td>
+            <td class="text-center">
+              <a class='btn btn-danger' href="{% url 'pulangpergi:delete' tujuan.slug %}">Hapus</a>
+            </td>
+            <td class="text-center">
+              <a class='btn btn-warning' href="{% url 'pulangpergi:update' tujuan.slug %}">Edit</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+  <a class='btn btn-success' href="{% url 'pulangpergi:create' %}">Tambah</a>
+
+{% endblock contents %}
