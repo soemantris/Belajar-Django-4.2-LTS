@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{judul}}</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="{% url 'index' %}">Beranda</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+
+    {% if messages %}
+        {% for pesan in messages %}
+            <P>{{pesan}}</P>
+        {% endfor %}
+    {% endif %}
+
+    <h1>Halaman {{judul}}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+</html>
