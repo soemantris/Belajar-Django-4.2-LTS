@@ -1,0 +1,15 @@
+<ul>
+    {% comment %} Otorisasi dalam permintaan web {% endcomment %}
+    {% if request.user.is_authenticated %}
+    {% comment %} True: logika untuk objek user {% endcomment %}
+    <li><a href="{% url 'index' %}">Beranda</a></li>
+    <li><a href="{% url 'ubah_password' %}">Ubah Password</a></li>
+    <li><a href="{% url 'change_password' %}">Change Password</a></li>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+    {% comment %} False: logika untuk anonymousUser {% endcomment %}
+    <li><a href="{% url 'index' %}">Beranda</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+    <li><a href="{% url 'register' %}">Register</a></li>
+    {% endif%}
+</ul>
