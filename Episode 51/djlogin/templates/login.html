@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{judul}}</title>
+</head>
+<body>
+
+    {% include "navbar.html" %}
+
+    <h1>Halaman {{judul}}</h1>
+
+    {% if messages %}
+        {% for pesan in messages %}
+            <P>{{pesan}}</P>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>
+        <a href="{% url 'password_reset' %}">Lupa password?</a>
+    </p>
+
+    <h3>Guys, lu sekarang login sebagai: {{user}}</h3>
+
+</body>
+</html>
